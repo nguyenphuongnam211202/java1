@@ -11,7 +11,7 @@ public class Bonus {
         chieuCao = sc.nextFloat();
         System.out.println("nhập cân nặng (kg)");
         canNang = sc.nextFloat();
-        double bmi = (canNang)/(chieuCao*2);
+        double bmi = (canNang)/(chieuCao*chieuCao);
         System.out.println("chỉ số BMI = " + bmi);
 
     }
