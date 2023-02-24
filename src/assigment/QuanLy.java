@@ -34,13 +34,17 @@ public class QuanLy {
                 System.out.print("mời nhập huê hồng");
                 hueHong = sc.nextDouble();
                 danhSachTiepThi.add(new TiepThi(maNhanVien, hoTenNhanVien, luong, doanhSo, hueHong));
-            } else {
+            } else if (flag.equals("trưởng phòng")) {
                 System.out.println("mời nhập lương trách nhiệm :");
                 luongTrachNhiem = sc.nextDouble();
                 danhSachTruongPhong.add(new TruongPhong(maNhanVien, hoTenNhanVien, luong, luongTrachNhiem));
+            } else {
+                System.out.println("nhập lại");
+                continue;
             }
-            System.out.println("chọn tiếp : Y/N");
-            String choose = sc.nextLine();
+
+            System.out.println("dừng lại chọn N hoặc nhấn phím bất kì để tiếp tục ");
+            String choose = sc.next();
             if (choose.equalsIgnoreCase("N")) {
                 for (TiepThi e : danhSachTiepThi) {
                     System.out.println(e);
